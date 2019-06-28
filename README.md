@@ -31,3 +31,8 @@
 ### webpack-dev-middleware + http代理 + 第三方mock系统
 
 **调研中...**
+
+## 可能涉及的相关技术
+
+- 服务器端知识
+- Websocket
