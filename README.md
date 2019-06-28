@@ -17,8 +17,9 @@
 
 缺点：
 
-- 无法进行JSONP mock
-- 跨域mock
+- 无法拦截JSONP请求
+- 无法拦截跨域请求
+- 无法进行全局变量mock
 
 ### rap2等系统
 
@@ -26,11 +27,19 @@
 
 缺点：
 
-- 无法进行JSONP mock
+- 无法拦截JSONP请求
+- 无法拦截跨域请求
+- 无法进行全局变量mock
 
 ### webpack-dev-middleware + http代理 + 第三方mock系统
 
-**调研中...**
+webpack-dev-middleware通过http代理到第三方mock系统，通过重写请求和转发请求和转发响应，完成数据mock
+
+缺点：
+
+- 无法拦截JSONP请求
+- 无法拦截跨域请求
+- 无法进行全局变量mock
 
 ## 可能涉及的相关技术
 
