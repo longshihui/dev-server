@@ -1,0 +1,26 @@
+{
+  "name": "dev-server",
+  "version": "1.0.0",
+  "description": "开发时接口mock",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/longshihui/dev-server.git"
+  },
+  "keywords": [
+    "dev",
+    "dev-server"
+  ],
+  "author": "longshihui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/longshihui/dev-server/issues"
+  },
+  "homepage": "https://github.com/longshihui/dev-server#readme",
+  "devDependencies": {
+    "typescript": "^3.6.2"
+  }
+}
