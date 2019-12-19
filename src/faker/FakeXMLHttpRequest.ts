@@ -1,4 +1,3 @@
-import Interceptor from "./Interceptor";
 /**
  * XMLHttpRequest拦截器
  */
