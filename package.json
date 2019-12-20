@@ -21,6 +21,10 @@
   },
   "homepage": "https://github.com/longshihui/dev-server#readme",
   "devDependencies": {
-    "typescript": "^3.6.2"
+    "typescript": "^3.6.2",
+    "@types/mockjs": "^1.0.2"
+  },
+  "dependencies": {
+    "mockjs": "^1.1.0"
   }
 }

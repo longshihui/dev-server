@@ -1,9 +1,8 @@
 /**
  * JSONP拦截器
  */
-
 export default class FakeJSONP {
-    intercept(): void {
+     fake(): void {
         let originalAppendChild = Node.prototype.appendChild;
         Node.prototype.appendChild = function<T extends Node>(newChild: T): T {
             if (newChild.nodeName.toLowerCase() === 'script') {

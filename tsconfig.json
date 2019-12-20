@@ -2,7 +2,8 @@
   "compilerOptions": {
     "module": "esnext",
     "target": "esnext",
-    "sourceMap": false
+    "sourceMap": false,
+    "allowSyntheticDefaultImports": true
   },
   "exclude": [
     "node_modules"

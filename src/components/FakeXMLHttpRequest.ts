@@ -1,7 +1,10 @@
 /**
  * XMLHttpRequest拦截器
  */
-class FakeXMLHttpRequest implements XMLHttpRequest {
+
+let originXMLHttpRequest: XMLHttpRequest;
+
+export class FakeXMLHttpRequest implements XMLHttpRequest, EventTarget {
     readonly DONE: number;
     readonly HEADERS_RECEIVED: number;
     readonly LOADING: number;
@@ -68,7 +71,9 @@ class FakeXMLHttpRequest implements XMLHttpRequest {
 
     setRequestHeader(name: string, value: string): void {
     }
-    intercept(): void {
 
+    static fake(): void {
+        originXMLHttpRequest = window.XMLHttpRequest;
+        window.XMLHttpRequest = FakeXMLHttpRequest;
     }
 }
