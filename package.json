@@ -21,10 +21,16 @@
   },
   "homepage": "https://github.com/longshihui/dev-server#readme",
   "devDependencies": {
-    "typescript": "^3.6.2",
-    "@types/mockjs": "^1.0.2"
+    "@types/mockjs": "^1.0.2",
+    "cz-conventional-changelog": "^3.0.2",
+    "typescript": "^3.6.2"
   },
   "dependencies": {
     "mockjs": "^1.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
   }
 }
