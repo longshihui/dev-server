@@ -1,36 +1,50 @@
 {
-  "name": "dev-server",
-  "version": "1.0.0",
-  "description": "开发时接口mock",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/longshihui/dev-server.git"
-  },
-  "keywords": [
-    "dev",
-    "dev-server"
-  ],
-  "author": "longshihui",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/longshihui/dev-server/issues"
-  },
-  "homepage": "https://github.com/longshihui/dev-server#readme",
-  "devDependencies": {
-    "@types/mockjs": "^1.0.2",
-    "cz-conventional-changelog": "^3.0.2",
-    "typescript": "^3.6.2"
-  },
-  "dependencies": {
-    "mockjs": "^1.1.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog"
+    "name": "dev-server",
+    "version": "1.0.0",
+    "description": "开发时接口mock",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/longshihui/dev-server.git"
+    },
+    "keywords": [
+        "dev",
+        "dev-server"
+    ],
+    "author": "longshihui",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/longshihui/dev-server/issues"
+    },
+    "homepage": "https://github.com/longshihui/dev-server#readme",
+    "devDependencies": {
+        "@types/mockjs": "^1.0.2",
+        "cz-conventional-changelog": "^3.0.2",
+        "husky": "^3.1.0",
+        "lint-staged": "^9.5.0",
+        "prettier": "^1.19.1",
+        "typescript": "^3.6.2"
+    },
+    "dependencies": {
+        "mockjs": "^1.1.0"
+    },
+    "config": {
+        "commitizen": {
+            "path": "cz-conventional-changelog"
+        }
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "**/*.{ts,js,css,scss,json}": [
+            "prettier --write",
+            "git add"
+        ]
     }
-  }
 }
